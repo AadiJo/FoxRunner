@@ -27,7 +27,7 @@ public class CharacterController2D : MonoBehaviour
 	private float hurtForce = 100f;
 	public static bool isHurt = false;
 	public Animator animator;
-	public int health = 10;
+	public static int health = 10;
 	public int coins = 0;
 	public TextMeshProUGUI coinDisplay;
 	public Text finalCoinDisplay;
@@ -228,19 +228,12 @@ public class CharacterController2D : MonoBehaviour
 
 			transform.position = respawnCoord;
 			animator.SetBool("IsFalling", true);
-			health -= 1;
 		}
     }
 
 	public void Respawn()
     {
 		transform.position = respawnCoord;
-		if (respawnCoord.x == initialCoords.x)
-        {
-			PlayerPrefs.SetFloat("CurrentTime", 0);
-        }
-		animator.SetBool("IsFalling", true);
-		coins = 0;
 	}
 
 	public void Move(float move, bool crouch, bool jump)

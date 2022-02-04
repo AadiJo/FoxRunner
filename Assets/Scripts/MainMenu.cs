@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour
     public static string player_Name;
     [SerializeField] TMP_Text nameDisplay;
     [SerializeField] TMP_Text playerSwapDisplay;
+    [SerializeField] GameObject namePanel;
 
     private void Awake()
     {
@@ -44,5 +45,14 @@ public class MainMenu : MonoBehaviour
     {
         nameDisplay.text = player_Name;
         playerSwapDisplay.text = player_Name;
+        if (player_Name != null && player_Name != "") 
+        {
+            namePanel.SetActive(false);
+        }
+
+        else
+        {
+            namePanel.SetActive(true);
+        }
     }
 }

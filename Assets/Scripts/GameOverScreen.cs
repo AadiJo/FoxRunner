@@ -16,6 +16,7 @@ public class GameOverScreen : MonoBehaviour
     public void ShutDown()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        CharacterController2D.health = 10;
         
     }
 

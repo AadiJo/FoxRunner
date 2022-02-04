@@ -20,7 +20,7 @@ public class HealthBar : MonoBehaviour
     {
         if (!CharacterController2D.levelComplete)
         {
-            slider.value = playercontroller.health;
+            slider.value = CharacterController2D.health;
         }
         
     }

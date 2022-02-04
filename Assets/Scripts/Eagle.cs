@@ -7,6 +7,8 @@ public class Eagle : MonoBehaviour
     public static Vector2 initialCoords;
     public Rigidbody2D rb;
     public GameObject player;
+    public static bool isUnder = false;
+    //public Enemy enemy;
 
     private void Awake()
     {
@@ -23,26 +25,29 @@ public class Eagle : MonoBehaviour
 
         if (Mathf.Abs(transform.position.x - player.transform.position.x) <= 6)
         {
-            if (Mathf.Abs(transform.position.x - player.transform.position.x) >= 0.5)
+            if (!isUnder)
             {
-                rb.velocity = new Vector2(0, -3);
-            }
 
-            else
-            {
-                rb.velocity = new Vector2(4, -3);
-            }
+                if (Mathf.Abs(transform.position.x - player.transform.position.x) >= 0.5)
+                {
+                    rb.velocity = new Vector2(0, -3);
+                }
 
-            if (player.transform.position.y >= transform.position.y)
-            {
-                rb.velocity = new Vector2(rb.velocity.x, 4);
-            }
+                else
+                {
+                    rb.velocity = new Vector2(4, -3);
+                }
 
-            else
-            {
-                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y);
+                if (player.transform.position.y >= transform.position.y)
+                {
+                    rb.velocity = new Vector2(rb.velocity.x, 4);
+                }
+
+                else
+                {
+                    rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y);
+                }
             }
-            
         }
         else
         {
@@ -60,6 +65,18 @@ public class Eagle : MonoBehaviour
 
 
         }
+
+        //if (Mathf.Abs(player.transform.position.x - transform.position.x) <= 1 && player.transform.position.y > transform.position.y)
+        //{
+            //isUnder = true;
+            //enemy.m_FacingRight = !enemy.m_FacingRight;
+            //rb.velocity = new Vector2(-rb.velocity.x, 0);
+        //}
+
+        //else
+        //{
+            //isUnder = false;
+        //}
     }
 }
 

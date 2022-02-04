@@ -11038,7 +11038,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 820667350}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.94, y: 3.24, z: 0}
+  m_LocalPosition: {x: -0.94, y: 4.78, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11094,9 +11094,7 @@ MonoBehaviour:
   rb: {fileID: 820667353}
   isFalling: 0
   isJumping: 0
-  isHurt: 0
   animator: {fileID: 820667358}
-  health: 10
   coins: 0
   coinDisplay: {fileID: 1672802587}
   finalCoinDisplay: {fileID: 473367481}
