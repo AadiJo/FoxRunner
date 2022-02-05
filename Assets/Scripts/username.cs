@@ -16,6 +16,7 @@ public class username : MonoBehaviour
         {
             MainMenu.player_Name = PlayerPrefs.GetString(name);
         }
+
     }
         
     public void UpdateName()
