@@ -234,6 +234,7 @@ public class CharacterController2D : MonoBehaviour
 	public void Respawn()
     {
 		transform.position = respawnCoord;
+		health = 10;
 	}
 
 	public void Move(float move, bool crouch, bool jump)

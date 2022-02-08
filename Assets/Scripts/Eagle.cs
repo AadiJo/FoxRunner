@@ -23,7 +23,7 @@ public class Eagle : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, 0);
         }
 
-        if (Mathf.Abs(transform.position.x - player.transform.position.x) <= 6)
+        if (Mathf.Abs(transform.position.x - player.transform.position.x) <= 12)
         {
             if (!isUnder)
             {

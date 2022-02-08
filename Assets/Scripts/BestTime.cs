@@ -31,7 +31,7 @@ public class BestTime : MonoBehaviour
 
         if (PlayerPrefs.GetString("Level3Best") != "00:00:00" && PlayerPrefs.GetString("Level3Best") != "")
         {
-            Lvl2finalTime = PlayerPrefs.GetString("Level2Best");
+            Lvl3finalTime = PlayerPrefs.GetString("Level3Best");
         }
     }
 

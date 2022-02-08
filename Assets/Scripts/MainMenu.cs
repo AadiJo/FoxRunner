@@ -36,6 +36,7 @@ public class MainMenu : MonoBehaviour
         BestTime.Lvl3finalTime = "00:00:00";
         BestTime.Level1BestTimes.Clear();
         BestTime.Level2BestTimes.Clear();
+        BestTime.Level3BestTimes.Clear();
         PlayerPrefs.SetString("Level1Best", "00:00:00");
         PlayerPrefs.SetString("Level2Best", "00:00:00");
         PlayerPrefs.SetString("Level3Best", "00:00:00");
